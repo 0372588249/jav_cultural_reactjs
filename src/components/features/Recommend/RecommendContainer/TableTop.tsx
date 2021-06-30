@@ -15,9 +15,6 @@ export default function TableTop(props: any) {
   const count =  props?.count
   const data = props?.data
 
-
-  
-
   
   console.log("count",count)
   return (
