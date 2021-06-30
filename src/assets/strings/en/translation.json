@@ -1,0 +1,135 @@
+{
+  "header": {
+    "theory": "Theory",
+    "recommend": "Recommend system",
+    "analysis": "Data analysis"
+  },
+  "error_request":{
+    "fail_request": "Fail request",
+    "error_network": "Error network"
+  },
+  "table_data":{
+    "height":"Height", "bust":"Bust", "waist":"Waist", "hip":"Hip",
+    "name":"Name","birthday":"Birthday","birthplace":"Birthplace",
+    "cluster":"Cluster","cup_size":"Cup_size","hobby":"Hobby",
+    "imgurl":"Imgurl","search":"Search","_name":"Kanji Name",
+    "age":"age"
+  },
+  "top":{
+    "top_tallest":"Top Tallest Height", 
+    "top_lowest_dimensions":"Top Lowest Height", 
+    "top_youngest":"Top Youngest", 
+    "top_oldest":"Top Old",
+    "top_smallest_hips":"Top Smallest Hips",
+    "top_biggest_hips":"Top Biggest Hips",
+    "top_smallest_bust":"Top Smallest Bust",
+    "top_biggest_bust":"Top Biggest Bust"
+  },
+  "messenger":{
+    "err_input":"Please enter the correct value !",
+    "err_data":"Please enter 1 data field !!!"
+  },
+  "step": [
+    "Step 1:",
+    "Step 2:",
+    "Step 3:",
+    "Step 4:",
+    "Step 5:",
+    "Step 6:",
+    "Step 7:",
+    "Step 8:",
+    "Step 9:",
+    "Step 10:"
+  ],
+  "input_data": ["height", "bust", "waist", "hip"],
+  "analysis_tab": {
+    "big_header": "System for analyzing and understanding Japanese culture",
+    "child_header": "Analyzing the data source of Japanese actresses, the system recommends actresses",
+    "txt_bnt_header": "Discover now",
+    "img_description": [
+      "Collected data.",
+      "Make data book, remove and convert inappropriate input fields into data suitable for problem input",
+      "Data after being cleaned",
+      "Input preprocessing for k-means algorithm",
+      "Elbow method function",
+      "Chart ????",
+      "The code uses the method of Metrics silhouette score and Metrics calinski score to evaluate the number of clusters k to be classified",
+      "Chart ????",
+      "Chart ????"
+    ],
+    "content": {
+      "header1": "1.The goal of solving the problem.",
+      "content1": [
+        "Collect data, build a dataset in excel format for building the model of the problem.",
+        "From the collected dataset, clean the data, remove the data sets that do not match the input of the problem.",
+        "Using the k-means algorithm to build a model by clustering elements with similar characteristics into the same data dimension.",
+        "From the analyzed model and the user input data, give suggestions that closely match the input data that the user entered."
+      ],
+      "header2": "2. The steps to perform the problem.",
+      "content2": [
+        "Collect and organize data as excel files.",
+        "Clean data, remove fields that are missing information and do not match the input of the problem.",
+        "The information fields used to process the input of the problem are:",
+        "We notice in the dataset that there are objects missing some important information fields, we will proceed to remove all those objects.",
+        "Format non-numeric input fields to numeric type.",
+        "Read data from the cleaned dataset.",
+        "Select the appropriate input data to include in the problem.",
+        "Convert the dataset to dataframe format as input for the k-means algorithm.",
+        "Use the elbow method to determine the number of clusters in the k-means algorithm.",
+        "Use the evaluation method Metrics silhouette score and Metrics calinski score to confirm the number of clusters k to be split.",
+        "Using the k-means algorithm to build a model by clustering elements with similar characteristics into the same data dimension.",
+        "From the analyzed model and the user input data, give suggestions that closely match the input data that the user entered."
+      ],
+      "step_content2": [
+        "Collect and build datasets:",
+        "Data cleaning:",
+        "Problem solving, model building by k-means algorithm:",
+        "Build a recommender system:"
+      ]
+    }
+  },
+  "topic":"K-means algorithm with clustering problem",
+  "title":{
+    "title1":{
+      "title":  "1.Introduction to Clustering Techniques in Data Mining",
+      "contend1": "Clustering is a very important technique in data mining, it belongs to the class of Unsupervised Learning methods in Machine Learning. There are many different definitions of this technique, but in essence we can understand clustering as the process of trying to group the given objects into clusters, so that the objects in the same cluster are similar. and other objects in the cluster are not similar.",
+      "contend2":"The purpose of clustering is to find out the nature within groups of data. Clustering algorithms generate clusters. However, there is no single criterion that is considered the best to evaluate the effect of cluster analysis, it depends on the purpose of clustering such as: data reduction, “natural clusters”, “useful” clusters, outlier detection",
+      "contend3":"Clustering techniques can be applied in many fields such as:",
+      "contend4":["Marketing: Identify customer groups (potential customers, valuable customers, classify and predict customer behavior, ...) using the company's products or services to help the company have an effective business strategy than;",
+                  "Biology: Grouping of animals and plants based on their attributes;",
+                  "Libraries:  Track readers, books, predict readers' needs…;",
+                  "Insurance, Finance: Grouping users of insurance and financial services, predicting customer trends, detecting financial frauds;",
+                  "WWW: Classification of documents, classification of web users...;"
+      ],
+      "contend5":"Clustering techniques are classified as follows (see picture)"
+    },
+    "title2":{
+      "title":  "2. K-Means Algorithm",
+      "contend1":"K-Means is a very important and commonly used algorithm in clustering techniques. The main idea of the K-Means algorithm is to find a way to group the given objects into K clusters (K is the number of predefined clusters, K is a positive integer) such that the sum of squares of the distances between the objects is The image to the center of the group is the smallest.",
+      "contend2":"The K-Means algorithm is described as follows:",
+      "contend3":"K-Means algorithm performs through the following main steps:",
+      "contend4":["Randomly choose K centers for K clusters. Each cluster is represented by the cluster centers.",
+        "Calculate distance between objects to K centers (usually using Euclidean distance)",
+        "Group objects to the nearest group",
+        "Redefine new centers for groups",
+        "Repeat step 2 until there are no group changes of the objects"
+      ],
+      "contend5":"Example illustrating the K-Mean algorithm:",
+      "contend6":"Suppose we have 4 drugs A, B, C, D, each class is represented by 2 features X and Y as follows. Our aim is to group the given drugs into two groups (K=2) based on their characteristics.",
+      "contend7":"Initialize the mind for 2 groups. Suppose we choose A to be the center of the first group (coordinates of the center of the first group c1(1,1)) and B to be the center of the second group (create the center of the second group c2 (2,1)).",
+      "contend8":" Calculate distance from objects to center of groups (Euclidean Distance)",
+      "contend9":"Each column in the distance matrix (D) is an object (the first column corresponds to object A, the second column corresponds to object B, …). The first row in the distance matrix represents the distance between the objects to the center of the first group (c1) and the second row in the distance matrix represents the distance of the objects to the center of the second group (c2 ).",
+      "contend10":"For example, the distance from the drug C=(4,3) to the center c1(1,1) is 3.61 and to the center c2(2,1) is 2.83 is calculated as follows:",
+      "contend11":" Group objects to the nearest group",
+      "contend12":"We see that group 1 after the first loop includes 1 object A and group 2 includes the remaining objects B, C, D.",
+      "contend13":" Recalculate the coordinates of the centers for the new groups based on the coordinates of the objects in the group. Group 1 has only 1 object A, so the center of group 1 remains unchanged, c1(1,1). The center of group 2 is calculated as follows:",
+      "contend14":" Recalculate distance from objects to new center",
+      "contend15":" Group objects into groups",
+      "contend16":" Recalculate the center for the new group",
+      "contend17":" Recalculate distance from objects to new center",
+      "contend18":"Group objects into groups",
+      "contend19":"We see that G2 = G1 (There is no change in the group of objects), so the algorithm stops and the results of grouping are as follows:",
+      "contend20":"The K-Means algorithm has the advantage of being simple, easy to understand and install. However, some limitations of K-Means are that the efficiency of the algorithm depends on choosing the number of groups K (which must be determined in advance) and the cost of performing a long-distance computation loop when the number of clusters K and the data large clustering data."
+    }
+  }
+}

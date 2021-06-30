@@ -1,0 +1,155 @@
+{
+  "header": {
+    "theory": "Lý thuyết",
+    "recommend": "Hệ thống gợi ý",
+    "analysis": "Phân tích dữ liệu"
+  },
+  "error_request": {
+    "fail_request": "Yêu cầu thất bại",
+    "error_network": "Lỗi mạng"
+  },
+  "table_data":{
+    "height":"Chiều cao", "bust":"Ngực", "waist":"Eo", "hip":"Hông",
+    "name":"Tên","birthday":"Ngày sinh","birthplace":"Nơi sinh",
+    "cluster":"Cụm","cup_size":"Cỡ ngực","hobby":"Sở thích",
+    "imgurl":"Ảnh","search":"Tìm kiếm","_name":"Tên hán tự",
+    "age":"tuổi"
+  },
+  "top":{
+    "top_tallest":"Top Cao Nhất", 
+    "top_lowest_dimensions":"Top Thấp Nhất", 
+    "top_youngest":"Top Trẻ Nhất", 
+    "top_oldest":"Top Già Nhất",
+    "top_smallest_hips":"Top Vòng 2 Nhỏ Nhất",
+    "top_biggest_hips":"Top Vòng 2 Lớn Nhất",
+    "top_smallest_bust":"Top Ngực Nhỏ Nhất",
+    "top_biggest_bust":"Top Ngực Lớn Nhất"
+  },
+  "messenger":{
+    "err_input":"Vui lòng nhập giá trị chính xác !",
+    "err_data":"Vui lòng nhập 1 trường dữ liệu !!!"
+  },
+  "step": [
+    "Bước 1:",
+    "Bước 2:",
+    "Bước 3:",
+    "Bước 4:",
+    "Bước 5:",
+    "Bước 6:",
+    "Bước 7:",
+    "Bước 8:",
+    "Bước 9:",
+    "Bước 10:"
+  ],
+  "input_data": ["height", "bust", "waist", "hip"],
+  "analysis_tab": {
+    "big_header": "Hệ thống phân tích và tìm hiểu văn hóa Nhật Bản",
+    "child_header": "Phân tích nguồn dữ liệu các nữ diên viên Nhật Bản, hệ thống recommend các nữ diễn viên",
+    "txt_bnt_header": "Khám phá ngay",
+    "img_description": [
+      "Dữ liệu thu thập được.",
+      "Làm sách dữ liệu, loại bỏ và chuyển đổi các trường thông tin đầu vào không phù hợp thành dự liệu phù hợp với đầu vào bài toán",
+      "Dữ liệu sau khi được làm sạch",
+      "Tiền sử lý đầu vào cho thuật toán k-means",
+      "Hàm phương pháp cùi trỏ",
+      "Biểu đồ Burn down mô tả sự biến thiên về khoảng cách giữa điểm trung tâm với phần còn lại của dữ liệu",
+      "Code sử dụng phương pháp Metrics silhouette score và Metrics calinski score để đánh giá số cụm k cần phân ",
+      "Kết quả đánh giá Metrics silhouette score và Metrics calinski score của K = 2, K = 3, K = 4",
+      "Biểu đồ mô tả vị trí các điểm sau khi phân cụm.",
+      "Biểu đồ mô tả vị trí các điểm sau khi phân cụm sau khi được tô màu.",
+      "Hàm recommend diễn viên theo: height, bust, waist, hips."
+    ],
+    "content": {
+      "header1": "1. Mục tiêu của bài toán.",
+      "content1": [
+        "Tiến hành thu thập dữ liệu, xây dựng bộ dataset định dạng excel cho việc xây dựng model của bài toán.",
+        "Từ tập dataset đã được thu thập, tiến hành làm sạch dữ liệu, loại bỏ các tập dữ liệu không phù hợp với đầu vào của bài toán.",
+        "Sử dụng thuật toán k-means để  xây dựng model bằng cách gom cụm các phần tử  có đặc điểm giống nhau vào cùng chiều dữ liệu.",
+        "Từ model đã được phân tích và dữ liệu người dùng nhập, đưa ra các gợi ý gần giống với dữ liệu đầu vào mà người dùng đã nhập."
+      ],
+      "header2": "2. Các bước thực hiện bài toán.",
+      "content2": [
+        "Thu thập và tổ chức dữ liệu dưới dạng file excel.",
+        "Làm sạch dữ liệu, loại bỏ các trường thiếu thông tin và không phù hợp với đầu vào của bài toán.",
+        "Các trường thông tin sử dụng để sử lý đầu vào của bài toán là:",
+        "Ta nhận thấy trong tập dataset có những đối tượng bị thiếu một vài trường thông tin quan trọng, ta sẽ tiến hành loại bỏ tất cả các đối tượng đó.",
+        "Format lại các trường dữ liệu đầu vào không phải số  thành kiểu số.",
+        "Đọc dữ liệu từ tập dataset đã được làm sạch.",
+        "Chọn dữ liệu đầu vào thích hợp đề đưa vào bài toán.",
+        "Chuyển tập dataset  về dạng dataframe để làm đầu vào cho thuật toán k-means.",
+        "Sử dụng phương pháp cùi trỏ để xác định số cụm trong thuật toán k-means.",
+        "Ý tưởng: tạo ra một mảng khoảng cách từ điểm trung tâm đến các điểm còn lại với số cụm bằng k ∊ [1, 10).",
+        "Biểu diễn dữ liệu khoảng cách trên plot để nhận biết sự biến thiên giữa cụm trung tâm và các điểm còn lại, nhận ra số cụm phù hợp cho bài toán là cụm nằm ở điểm củ trỏ.",
+        "Biểu đồ Burn down mô tả sự biến thiên về khoảng cách giữa điểm trung tâm với phần còn lại của dữ liệu.",
+        "Điểm tốt nhất nằm ở điểm củ trỏ, nhìn vào biểu đồ, ta có thể nhìn thấy rõ điểm tốt nhất là điểm k= 3.",
+        "Sử dụng phương pháp đánh giá Metrics silhouette score và Metrics calinski score để xác nhận số cụm k cần phân.",
+        "Chọn thử k = 3 và hai cụm gần nhất là k = 2 và k = 4 để xem đánh giá.",
+        "Từ kết quả ta có thể nhận thấy Metrics silhouette score và Metrics calinski score của k = 3 đều lớn hơn hai cụm kề là k = 2 và k = 4 nên ta sẽ chọn k = 3 vào bài toán này với tập dataset hiện tại.",
+        "Sử dụng thuật toán k-means để  xây dựng model bằng cách gom cụm các phần tử  có đặc điểm giống nhau vào cùng chiều dữ liệu.",
+        "Kết quả sau khi phân cụm, các điểm sẽ nằm về đúng vị trí cụm mà nó thuộc về.",
+        "Tô màu và vẽ điểm trung tâm cho từng cụm.",
+        "Tiến hành trộn hai dataframe là đầu vào của bài toán với dữ liệu ban đầu được đọc lên từ dataset theo id.",
+        "Xây dựng hàm recommend với dữ liệu đầu vào là thông số của diễn viên mà người dùng nhập.",
+        "Đầu ra của hàm chính là random 10 diễn viên thuộc cụm gần giống với dữ liệu mà người dùng nhập vào.",
+        "Từ model đã được phân tích và dữ liệu người dùng nhập, đưa ra các gợi ý gần giống với dữ liệu đầu vào mà người dùng đã nhập."
+      ],
+      "step_content2": [
+        "Thu thập và xây dựng bộ dữ liệu:",
+        "Làm sạch dữ liệu:",
+        "Xử lý bài toán, xây dựng model bằng thuật toán k-means:",
+        "Xây dựng hệ thống recommend:"
+      ],
+      "header3": "3. Kết quả.",
+      "content3": [
+        "1",
+        "2"
+      ]
+    }
+  },
+  "topic": "Thuật toán K-mean với bài toán phân cụm",
+  "title": {
+    "title1": {
+      "title": "1.Giới thiệu về kỹ thuật phân cụm trong Khai phá dữ liệu (Clustering Techniques in Data Mining)",
+      "contend1": "Phân cụm là kỹ thuật rất quan trọng trong khai phá dữ liệu, nó thuộc lớp các phương pháp Unsupervised Learning trong Machine Learning. Có rất nhiều định nghĩa khác nhau về kỹ thuật này, nhưng về bản chất ta có thể hiểu phân cụm là các qui trình tìm cách nhóm các đối tượng đã cho vào các cụm (clusters), sao cho các đối tượng trong cùng 1 cụm tương tự (similar) nhau và các đối tượng khác cụm thì không tương tự (Dissimilar) nhau.",
+      "contend2": "Mục đích của phân cụm là tìm ra bản chất bên trong các nhóm của dữ liệu. Các thuật toán phân cụm (Clustering Algorithms) đều sinh ra các cụm (clusters). Tuy nhiên, không có tiêu chí nào là được xem là tốt nhất để đánh hiệu của của phân tích phân cụm, điều này phụ thuộc vào mục đích của phân cụm như: data reduction, “natural clusters”, “useful” clusters, outlier detection",
+      "contend3": "Kỹ thuật phân cụm có thể áp dụng trong rất nhiều lĩnh vực như:",
+      "contend4": [
+        "Marketing: Xác định các nhóm khách hàng (khách hàng tiềm năng, khách hàng giá trị, phân loại và dự đoán hành vi khách hàng,…) sử dụng sản phẩm hay dịch vụ của công ty để giúp công ty có chiến lược kinh doanh hiệu quả hơn;",
+        "Biology: Phận nhóm động vật và thực vật dựa vào các thuộc tính của chúng;",
+        "Libraries:  Theo dõi độc giả, sách, dự đoán nhu cầu của độc giả…;",
+        "Insurance, Finance: Phân nhóm các đối tượng sử dụng bảo hiểm và các dịch vụ tài chính, dự đoán xu hướng (trend) của khách hàng, phát hiện gian lận tài chính (identifying frauds);",
+        "WWW:  Phân loại tài liệu (document classification);  phân loại người dùng web (clustering weblog);…"
+      ],
+      "contend5": "Các kỹ thuật phân cụm được phân loại như sau (xem hình)"
+    },
+    "title2": {
+      "title": "2. Thuật Toán K-Means",
+      "contend1": "K-Means là thuật toán rất quan trọng và được sử dụng phổ biến trong kỹ thuật phân cụm. Tư tưởng chính của thuật toán K-Means là tìm cách phân nhóm các đối tượng (objects) đã cho vào K cụm (K là số các cụm được xác định trước, K nguyên dương) sao cho tổng bình phương khoảng cách giữa các đối tượng đến tâm nhóm (centroid )là nhỏ nhất.",
+      "contend2": "Thuật toán K-Means được mô tả như sau:",
+      "contend3": "Thuật toán K-Means thực hiện qua các bước chính sau:",
+      "contend4": [
+        "Chọn ngẫu nhiên K tâm (centroid) cho K cụm (cluster). Mỗi cụm được đại diện bằng các tâm của cụm.",
+        "Tính khoảng cách giữa các đối tượng (objects) đến K tâm (thường dùng khoảng cách Euclidean)",
+        "Nhóm các đối tượng vào nhóm gần nhất",
+        "Xác định lại tâm mới cho các nhóm",
+        "Thực hiện lại bước 2 cho đến khi không có sự thay đổi nhóm nào của các đối tượng"
+      ],
+      "contend5": "Ví dụ minh họa thuật toán K-Mean:",
+      "contend6": "Giả sử ta có 4 loại thuốc A,B,C,D, mỗi loại thuộc được biểu diễn bởi 2 đặc trưng X và Y như sau. Mục đích của ta là nhóm các thuốc đã cho vào 2 nhóm (K=2) dựa vào các đặc trưng của chúng.",
+      "contend7": " Khởi tạo tâm (centroid) cho 2 nhóm. Giả sử ta chọn A là tâm của nhóm thứ nhất (tọa độ tâm nhóm thứ nhất c1(1,1)) và B là tâm của nhóm thứ 2 (tạo độ tâm nhóm thứ hai c2 (2,1)).",
+      "contend8": " Tính khoảng cách từ các đối tượng đến tâm của các nhóm (Khoảng cách Euclidean)",
+      "contend9": "Mỗi cột trong ma trận khoảng cách (D) là một đối tượng (cột thứ nhất tương ứng với đối tượng A, cột thứ 2 tương ứng với đối tượng B,…). Hàng thứ nhất trong ma trận khoảng cách biểu diễn khoảng cách giữa các đối tượng đến tâm của nhóm thứ nhất (c1) và hàng thứ 2 trong ma trận khoảng cách biểu diễn khoảng cách của các đối tượng đến tâm của nhóm thứ 2 (c2).",
+      "contend10": "Ví dụ, khoảng cách từ loại thuốc C=(4,3) đến tâm c1(1,1) là 3.61  và đến tâm c2(2,1) là 2.83 được tính như sau:",
+      "contend11": " Nhóm các đối tượng vào nhóm gần nhất",
+      "contend12": "Ta thấy rằng  nhóm 1 sau vòng lặp thứ nhất gồm có 1 đối tượng A và nhóm 2 gồm các đối tượng còn lại B,C,D.",
+      "contend13": " Tính lại tọa độ các tâm cho các nhóm mới dựa vào tọa độ của các đối tượng trong nhóm. Nhóm 1 chỉ có 1 đối tượng A nên tâm nhóm 1 vẫn không đổi, c1(1,1). Tâm nhóm 2 được tính như sau:",
+      "contend14": " Tính lại khoảng cách từ các đối tượng đến tâm mới",
+      "contend15": " Nhóm các đối tượng vào nhóm",
+      "contend16": " Tính lại tâm cho nhóm mới",
+      "contend17": " Tính lại khoảng cách từ các đối tượng đến tâm mới",
+      "contend18": " Nhóm các đối tượng vào nhóm",
+      "contend19": "Ta thấy G2 = G1 (Không có sự thay đổi nhóm nào của các đối tượng) nên thuật toán dừng và kết quả phân nhóm như sau:",
+      "contend20": "Thuật toán K-Means có ưu điểm là đơn giản, dễ hiểu và cài đặt. Tuy nhiên, một số hạn chế của K-Means là hiệu quả của thuật toán phụ thuộc vào việc chọn số nhóm K (phải xác định trước) và chi phí cho thực hiện vòng lặp tính toán khoảng cách lớn khi số cụm K và dữ liệu phân cụm lớn."
+    }
+  }
+}

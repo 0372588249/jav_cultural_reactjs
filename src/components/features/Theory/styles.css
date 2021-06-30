@@ -1,0 +1,12 @@
+.switch-wrapper-animated > div{
+    width:100%;
+}
+#topic{
+    color: red;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+img {
+    max-width: 100%;
+}
